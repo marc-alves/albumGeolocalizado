@@ -1,0 +1,27 @@
+{
+  "albuns": [
+    {
+      "id": 1,
+      "titulo": "Álbum de Verão",
+      "descricao": "Memórias do verão de 2023",
+      "localizacao": { "latitude": -23.550520, "longitude": -46.633307 },
+      "data": "2023-12-01",
+      "urlCapa": "https://exemplo.com/imagem-verao.jpg"
+    }
+  ],
+  "fotos": [
+    {
+      "id": 1,
+      "url": "https://exemplo.com/foto1.jpg",
+      "descricao": "Pôr do sol na praia",
+      "albumId": 1
+    }
+  ],
+  "destaques": [
+    {
+      "id": 1,
+      "albumId": 1,
+      "textoDestaque": "Veja as incríveis memórias do nosso verão!"
+    }
+  ]
+}
