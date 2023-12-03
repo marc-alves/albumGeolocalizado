@@ -1,23 +1,34 @@
 const API_URL = "http://localhost:3000"
 
 export const obterFotosInicio = async () => {
-  // Carrossel com fotos registradas na estrutura DESTAQUES e que fazem parte dos diversos álbuns registrados na aplicação
-  const url = API_URL + "/destaques";
-  const response = await fetch(url);
-  return response.json()
+  // Fotos registradas na estrutura DESTAQUES e que fazem parte dos diversos álbuns
+  const urlDestaques = API_URL + "/destaques";
+  const destaqRes = await fetch(urlDestaques);
+  const destaques = await destaqRes.json();
+  console.log(destaques);
+  
+  const urlFotos = API_URL + "/fotos?" + destaques.map( d => "albumId=" + d.albumId ).join("&");
+  const fotosRes = await fetch(urlFotos);
+  return fotosRes.json();
 }
 
 export const obterAlbuns = async () => {
-  // A página deve apresentar uma grade com todos os álbuns registrados na estrutura ÁLBUNS.
+  // Todos os álbuns registrados na estrutura ÁLBUNS.
   const url = API_URL + "/albuns";
   const response = await fetch(url);
-  return response.json()
+  return response.json();
 }
 
-export const obterAlbum = (albumId) => {
+export const obterAlbum = async (albumId) => {
   // Informações gerais do ÁLBUM
+  const url = API_URL + "/albuns/" + albumId;
+  const response = await fetch(url);
+  return response.json();
 }
 
-export const obterFotosAlbum = (albumId) => {
+export const obterFotosAlbum = async (albumId) => {
   // Fotos incluídas no ÁLBUM
+  const url = API_URL + "/fotos?albumId=" + albumId;
+  const response = await fetch(url);
+  return response.json();
 }
