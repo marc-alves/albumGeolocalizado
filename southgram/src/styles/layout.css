@@ -14,5 +14,31 @@
 
 .layout-container {
   min-height: 100vh;
+  background-color: var(--white);
+}
+
+.header {
+  height: 100px;
   width: 100%;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.header-image {
+  height: 80px;
+  filter: invert(1);
+}
+
+.header-title {
+  color: var(--white);
+  font-size: 3rem;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 20px;
+}
+
+.footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 20px 0;
 }

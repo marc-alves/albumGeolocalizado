@@ -13,8 +13,8 @@ export const HomeCarousel = ({fotos}) => {
   return (
     <Carousel>
       { fotos.map((foto) =>   
-        <Carousel.Item>
-          <CarouselImage key={foto.id} img={foto.url} alt={foto.descricao} />
+        <Carousel.Item key={foto.id}>
+          <CarouselImage img={foto.url} alt={foto.descricao} />
           <Carousel.Caption>
             <p>{foto.descricao}</p>
           </Carousel.Caption>

@@ -7,7 +7,7 @@ export const obterFotosInicio = async () => {
   const destaques = await destaqRes.json();
   console.log(destaques);
   
-  const urlFotos = API_URL + "/fotos?" + destaques.map( d => "albumId=" + d.albumId ).join("&");
+  const urlFotos = API_URL + "/fotos?" + destaques.map( d => "albumId=" + d.albumId ).join("&") + "_limit=8";
   const fotosRes = await fetch(urlFotos);
   return fotosRes.json();
 }

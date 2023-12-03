@@ -1,4 +1,19 @@
 
 .carousel-img {
-  max-height: 100vh;
+  height: 80vh;
+}
+
+.carousel-img img {
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+}
+
+.album-na-grade {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  cursor: pointer;
 }

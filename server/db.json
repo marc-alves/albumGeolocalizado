@@ -12,7 +12,7 @@
       "id": 2,
       "titulo": "Bolivia, memórias em La Paz",
       "descricao": "Descobrindo a capital da Bolívia",
-      "localizacao": { "latitude":  -16.4897, "longitude":68.1193},
+      "localizacao": { "latitude":  -16.4897, "longitude":-68.1193},
       "data": "2023-12-02",
       "urlCapa": "https://images.unsplash.com/photo-1549875041-2eb9fb154aaf?q=80&w=2014&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
@@ -38,8 +38,8 @@
     },
     {
       "id": 4,
-      "url": "",
-      "descricao": "https://img.freepik.com/fotos-gratis/prato-de-raclette-com-variedade-de-comida-deliciosa_23-2149514123.jpg?w=360&t=st=1701540798~exp=1701541398~hmac=542cf9bd6f2a03686bfaa45558c1f7f1b8391ed76c970d8351d69a417f86720e",
+      "url": "https://img.freepik.com/fotos-gratis/prato-de-raclette-com-variedade-de-comida-deliciosa_23-2149514123.jpg?w=360&t=st=1701540798~exp=1701541398~hmac=542cf9bd6f2a03686bfaa45558c1f7f1b8391ed76c970d8351d69a417f86720e",
+      "descricao": "",
       "albumId": 1
     },
     {
