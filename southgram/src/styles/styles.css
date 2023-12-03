@@ -17,3 +17,13 @@
   display: block;
   cursor: pointer;
 }
+
+.foto-na-grade {
+  height: 300px;
+  min-width: 200px;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
