@@ -4,7 +4,10 @@
       "id": 1,
       "titulo": "Argentina, memórias em Buenos Aires ",
       "descricao": "Explorando a capital da Argentina",
-      "localizacao": { "latitude": -34.6083, "longitude":-58.3712},
+      "localizacao": {
+        "latitude": -34.6083,
+        "longitude": -58.3712
+      },
       "data": "2023-12-01",
       "urlCapa": "https://images.unsplash.com/photo-1592593640541-9363711fdb2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
@@ -12,7 +15,10 @@
       "id": 2,
       "titulo": "Bolivia, memórias em La Paz",
       "descricao": "Descobrindo a capital da Bolívia",
-      "localizacao": { "latitude":  -16.4897, "longitude":68.1193},
+      "localizacao": {
+        "latitude": -16.4897,
+        "longitude": 68.1193
+      },
       "data": "2023-12-02",
       "urlCapa": "https://images.unsplash.com/photo-1549875041-2eb9fb154aaf?q=80&w=2014&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
@@ -20,7 +26,10 @@
       "id": 3,
       "titulo": "Brasília: Capital Moderna",
       "descricao": "Explorando a capital do Brasil",
-      "localizacao": { "latitude":-15.7801, "longitude":  -47.9292 },
+      "localizacao": {
+        "latitude": -15.7801,
+        "longitude": -47.9292
+      },
       "data": "2023-12-03",
       "urlCapa": "https://plus.unsplash.com/premium_photo-1670782711985-0349837f7d45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJyYXNpbCUyMGJhbmRlaXJhfGVufDB8fDB8fHww"
     },
@@ -28,7 +37,10 @@
       "id": 4,
       "titulo": "Santiago: Entre Montanhas",
       "descricao": "Descobrindo a capital do Chile",
-      "localizacao": { "latitude":-33.4513, "longitude": -70.6653 },
+      "localizacao": {
+        "latitude": -33.4513,
+        "longitude": -70.6653
+      },
       "data": "2023-12-04",
       "urlCapa": "https://img.olhardigital.com.br/wp-content/uploads/2021/03/Bandeira-do-Chile.jpg"
     },
@@ -36,7 +48,10 @@
       "id": 5,
       "titulo": "Bogotá: Capital Cultural",
       "descricao": "Explorando a capital da Colômbia",
-      "localizacao": { "latitude": 4.624335,"longitude": -74.063644 },
+      "localizacao": {
+        "latitude": 4.624335,
+        "longitude": -74.063644
+      },
       "data": "2023-12-05",
       "urlCapa": "https://www.voltologo.net/wp-content/uploads/2014/10/viajar-colombia-motivos.jpg"
     }
@@ -214,30 +229,18 @@
       "id": 29,
       "url": "https://images.unsplash.com/photo-1568632234168-5d77a6ff2396?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "descricao": "Malaga cidade, Arena e edifícios de apartamentos",
-      "albumId":5
+      "albumId": 5
     },
     {
       "id": 30,
       "url": "https://images.unsplash.com/photo-1542854225-73be52b976bd?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "descricao": "Vista noturna da cidade de Bogotá,",
-      "albumId": 5}
-],
+      "albumId": 5
+    }
+  ],
   "destaques": [
     {
-      "id": 1,
-      "albumId":1,
-      "textoDestaque": ""
-    },
-    {
-      "id": 1,
-      "albumId":2,
-      "textoDestaque": ""
-    },
-    {
-      "id": 1,
-      "albumId":3,
-      "textoDestaque": ""
+      "destaques": []
     }
   ]
 }
-
