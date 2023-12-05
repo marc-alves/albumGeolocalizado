@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
-import { adicionarDestaque, removerDestaque, verificarDestaque } from "../services/services";
+import { adicionarDestaque, removerDestaque, buscarDestaque } from "../services/services";
 
 export const BotaoDestaque = ({album}) => {
 
-    const [ativado, setAtivado] = useState(false);
+    const [destaqueIdOuNull, setDestaqueIdOuNull] = useState(null);
 
     useEffect(() => {
         if(album && album.id)
-            verificarDestaque(album.id).then(setAtivado)
+            buscarDestaque(album.id).then(destaque => setDestaqueIdOuNull(destaque ? destaque.id : null))
     }, [album]);
 
     const toggleDestaque = async () => {
-        if(ativado) {
+        if(destaqueIdOuNull) {
             adicionarDestaque(album.id, album.descricao)
         } else {
-            removerDestaque(album.id)
+            removerDestaque(destaqueIdOuNull)
         }
     }
 
     return (
         <Button onClick={toggleDestaque} >
-            { ativado ? "Remover destaque" : "Adicionar destaque" }
+            { destaqueIdOuNull ? "Remover destaque" : "Adicionar destaque" }
         </Button>
     )
 }

@@ -50,25 +50,19 @@ export const adicionarDestaque = async (albumId, descricao) => {
 }
 
 export const removerDestaque = async (albumId) => {
-  const urlGet = API_URL + "/destaques?albumId=" + albumId;
-  const response = await fetch(urlGet)
-  const json = response.json();
-  if(json && json.length) {
-    const urlDelete = API_URL + "/destaques?albumId=" + json[0].albumId;
-    const responseDelete = await fetch(urlDelete, {
-      method: "DELETE"
-    })
-    return responseDelete.ok;
-  }
-  return false;
+  const urlDelete = API_URL + "/destaques?albumId=" + json[0].albumId;
+  const responseDelete = await fetch(urlDelete, {
+    method: "DELETE"
+  })
+  return responseDelete.ok;
 }
 
-export const verificarDestaque = async (albumId) => {
+export const buscarDestaque = async (albumId) => {
   const url = API_URL + "/destaques?albumId=" + albumId;
   const response = await fetch(url)
   const json = response.json();
   if(json && json.length) {
-    return true;
+    return json[0];
   }
-  return false;
+  return null;
 }
