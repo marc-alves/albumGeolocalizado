@@ -12,7 +12,6 @@ export const Footer = () => {
                 <div className="col">
                     <h3>Autora</h3>
                     <div className="author-info">
-                        <img src="assets/img/person.jpg" alt="Foto da Autora" />
                         <div className="author-details">
                             <p>Lorraine Carvalho da Silva</p>
                             <p>Email: lorrainesilva.mg@jtexpress.com.br</p>
