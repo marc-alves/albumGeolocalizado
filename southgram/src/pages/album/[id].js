@@ -4,6 +4,7 @@ import { obterAlbum, obterFotosAlbum } from "../../services/services"
 import { GradeFotos } from "../../components/grade-fotos";
 import { ModalFotos } from "../../components/modal-fotos";
 import { MapaAlbuns } from "../../components/mapa-albuns";
+import { BotaoDestaque } from "../../components/botao-destaque";
 
 const AlbumPage = ({ params }) => {
 
@@ -36,6 +37,7 @@ const AlbumPage = ({ params }) => {
               Latitude: {album.localizacao.latitude} <br/>
               Longitude: {album.localizacao.longitude}
             </p>
+            <BotaoDestaque album={album} />
           </div>
         </div>
         <GradeFotos fotos={fotos} onClick={(id) => setOpenModal(id)} />

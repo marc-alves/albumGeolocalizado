@@ -32,3 +32,43 @@ export const obterFotosAlbum = async (albumId) => {
   const response = await fetch(url);
   return response.json();
 }
+
+export const adicionarDestaque = async (albumId, descricao) => {
+  const url = API_URL + "/destaques";
+  const data = {
+    albumId, 
+    descricao
+  }
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data)
+  })
+  return response.ok;
+}
+
+export const removerDestaque = async (albumId) => {
+  const urlGet = API_URL + "/destaques?albumId=" + albumId;
+  const response = await fetch(urlGet)
+  const json = response.json();
+  if(json && json.length) {
+    const urlDelete = API_URL + "/destaques?albumId=" + json[0].albumId;
+    const responseDelete = await fetch(urlDelete, {
+      method: "DELETE"
+    })
+    return responseDelete.ok;
+  }
+  return false;
+}
+
+export const verificarDestaque = async (albumId) => {
+  const url = API_URL + "/destaques?albumId=" + albumId;
+  const response = await fetch(url)
+  const json = response.json();
+  if(json && json.length) {
+    return true;
+  }
+  return false;
+}
