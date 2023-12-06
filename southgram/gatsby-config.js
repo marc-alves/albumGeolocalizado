@@ -7,5 +7,5 @@ module.exports = {
     siteUrl: `http://localhost:8000`,
     description: `Explore nossas memórias fotograficas da incrível América do Sul`,
   },
-  plugins: [`gatsby-plugin-name`],
+  plugins: [],
 }

@@ -7,7 +7,7 @@ export const GradeAlbuns = ({albuns}) => {
       <h1 className="mb-4">Álbuns</h1>
       <div className="row">
         {albuns.map((album) => 
-          <div className="col mb-4" style={{ minWidth: "400px" }}>
+          <div key={album.id} className="col mb-4" style={{ minWidth: "400px" }}>
             <Link 
               to={"/album/" + album.id}
               className="album-na-grade" 
