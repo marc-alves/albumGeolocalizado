@@ -8,19 +8,27 @@ export const BotaoDestaque = ({album}) => {
 
     useEffect(() => {
         if(album && album.id)
-            buscarDestaque(album.id).then(destaque => setDestaqueIdOuNull(destaque ? destaque.id : null))
+            verificaDestaque()
     }, [album]);
 
+    const verificaDestaque = () => {
+        buscarDestaque(album.id).then(destaque => {
+            console.log(destaque)
+            setDestaqueIdOuNull(destaque ? destaque.id : null)
+        })
+    }
+
     const toggleDestaque = async () => {
-        if(destaqueIdOuNull) {
-            adicionarDestaque(album.id, album.descricao)
+        if(!destaqueIdOuNull) {
+            await adicionarDestaque(album.id, album.descricao)
         } else {
-            removerDestaque(destaqueIdOuNull)
+            await removerDestaque(destaqueIdOuNull)
         }
+        verificaDestaque()
     }
 
     return (
-        <Button onClick={toggleDestaque} >
+        <Button onClick={toggleDestaque} variant={destaqueIdOuNull ? 'outline-primary' : 'primary'}>
             { destaqueIdOuNull ? "Remover destaque" : "Adicionar destaque" }
         </Button>
     )

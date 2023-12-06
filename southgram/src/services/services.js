@@ -6,10 +6,12 @@ export const obterFotosInicio = async () => {
   const destaqRes = await fetch(urlDestaques);
   const destaques = await destaqRes.json();
   console.log(destaques);
-  
-  const urlFotos = API_URL + "/fotos?" + destaques.map( d => "albumId=" + d.albumId ).join("&") + "_limit=8";
-  const fotosRes = await fetch(urlFotos);
-  return fotosRes.json();
+  if(destaques && destaques.length) {    
+    const urlFotos = API_URL + "/fotos?" + destaques.map( d => "albumId=" + d.albumId ).join("&") + "&_limit=8";
+    const fotosRes = await fetch(urlFotos);
+    return fotosRes.json();
+  } 
+  return []
 }
 
 export const obterAlbuns = async () => {
@@ -36,31 +38,31 @@ export const obterFotosAlbum = async (albumId) => {
 export const adicionarDestaque = async (albumId, descricao) => {
   const url = API_URL + "/destaques";
   const data = {
-    albumId, 
+    albumId,
     descricao
-  }
+  };
   const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data)
-  })
+  });
   return response.ok;
 }
 
-export const removerDestaque = async (albumId) => {
-  const urlDelete = API_URL + "/destaques?albumId=" + json[0].albumId;
+export const removerDestaque = async (destaqueId) => {
+  const urlDelete = API_URL + "/destaques/" + destaqueId;
   const responseDelete = await fetch(urlDelete, {
     method: "DELETE"
-  })
+  });
   return responseDelete.ok;
 }
 
 export const buscarDestaque = async (albumId) => {
   const url = API_URL + "/destaques?albumId=" + albumId;
-  const response = await fetch(url)
-  const json = response.json();
+  const response = await fetch(url);
+  const json = await response.json();
   if(json && json.length) {
     return json[0];
   }

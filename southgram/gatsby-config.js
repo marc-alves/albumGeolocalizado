@@ -3,7 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Southgram`,
+    siteUrl: `http://localhost:8000`,
+    description: `Explore nossas memórias fotograficas da incrível América do Sul`,
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-name`],
 }

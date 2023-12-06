@@ -12,18 +12,16 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     obterFotosInicio().then((fotos) => {
-      console.log(fotos)
       setFotosDestaque(fotos)
     })
     obterAlbuns().then((albuns) => {
-      console.log(albuns)
       setAlbuns(albuns)
     })
   }, [])
 
   return (
     <Layout>
-      <HomeCarousel fotos={fotosDestaque} />
+      { (fotosDestaque && fotosDestaque.length > 0) && <HomeCarousel fotos={fotosDestaque} /> }
       <MapaAlbuns albuns={albuns} />
       <GradeAlbuns albuns={albuns} />
     </Layout>
