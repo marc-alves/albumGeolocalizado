@@ -36,3 +36,11 @@
   background-size: cover;
   cursor: pointer;
 }
+
+.carousel-modal-img {
+  max-height: 90vh;
+}
+
+.carousel-modal-img img {
+  width: 100%;
+}

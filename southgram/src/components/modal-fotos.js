@@ -3,15 +3,15 @@ import { Carousel, Modal } from "react-bootstrap";
 
 const CarouselImage = ({img, alt}) => {
   return (
-    <div className="carousel-img">
-      <img src={img} alt={alt} width={"100%"} />
+    <div className="carousel-modal-img">
+      <img src={img} alt={alt} />
     </div>
   )
 }
 
 export const ModalFotos = ({fotos=[], open, onClose}) => {
   return (
-    <Modal show={open} onBackdropClick={onClose}  onExit={onClose} onHide={onClose} >
+    <Modal show={open} onBackdropClick={onClose} onExit={onClose} onHide={onClose} size="lg" style={{ backgroundColor: "transparent" }}>
       <Carousel defaultActiveIndex={fotos.findIndex(f => f.id === open)}>
       { fotos.map((foto) =>   
         <Carousel.Item key={foto.id}>
