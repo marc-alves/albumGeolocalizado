@@ -42,3 +42,22 @@
   color: var(--white);
   padding: 20px 0;
 }
+.creditos {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.creditos-texto {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.linha {
+  height: 2px;
+  background-color: var(--secondary-color);
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

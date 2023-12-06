@@ -241,6 +241,21 @@
   "destaques": [
     {
       "destaques": []
+    },
+    {
+      "id": 1,
+      "albumId": 3,
+      "textoDestaque": "Veja as incríveis memórias do nosso verão!"
+    },
+    {
+      "albumId": 3,
+      "textoDestaque": "Veja as incríveis memórias do nosso verão!",
+      "id": 2
+    },
+    {
+      "albumId": 3,
+      "textoDestaque": "Veja as incríveis memórias do nosso verão!",
+      "id": 3
     }
   ]
 }

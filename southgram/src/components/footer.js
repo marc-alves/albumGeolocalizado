@@ -1,26 +1,39 @@
 import * as React from "react"
+import imagens from "../images/perfil-de-mulher.png"
+
+// ...
 
 export const Footer = () => {
   return (
-    <footer className="footer">
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <h3>Sobre</h3>
-                </div>
+    <footer class="footer">
+  <div class="creditos">
+    <p class="creditos-texto">Créditos</p>
+    <div class="linha"></div>
+  </div>
 
-                <div className="col">
-                    <h3>Autora</h3>
-                    <div className="author-info">
-                        <div className="author-details">
-                            <p>Lorraine Carvalho da Silva</p>
-                            <p>Email: lorrainesilva.mg@jtexpress.com.br</p>
-                            <p>Telefone: (31) 9 7209-1790</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>Sobre</h3>
+        © 2023 Southgram. Desenvolvido com ❤️ por Lorraine Carvalho. Explore nossas memórias fotográficas das incríveis capitais da América do Sul. 🌎✨
+
+      </div>
+
+      <div class="col">
+        <h3>Autora</h3>
+        <div className="autor-info" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={imagens} alt=""
+                style={{ height: '100px', marginRight: '5px', filter:'invert(1)' }} />
+    
+            <div className="autor-detalhes">
+                <p>Lorraine Carvalho da Silva</p>
+                <p>Email: 1478129@sga.pucminas.br</p>
+                <p>Telefone: (31) 9 7209-1790</p>
             </div>
-        </div>
-    </footer>
+         </div>
+      </div>
+    </div>
+  </div>
+</footer>
   )
 }
