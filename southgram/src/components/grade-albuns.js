@@ -13,7 +13,8 @@ export const GradeAlbuns = ({albuns}) => {
               className="album-na-grade" 
               style={{ backgroundImage: `url(${album.urlCapa})` }}
             >
-              <div>
+              <div className="descricao-album-na-grade">
+                <b>{album.titulo}</b> <br/>
                 {album.descricao}
               </div>
             </Link>

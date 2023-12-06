@@ -238,5 +238,16 @@
       "albumId": 5
     }
   ],
-  "destaques": []
+  "destaques": [
+    {
+      "albumId": 2,
+      "descricao": "Descobrindo a capital da Bolívia",
+      "id": 1
+    },
+    {
+      "albumId": 4,
+      "descricao": "Descobrindo a capital do Chile",
+      "id": 2
+    }
+  ]
 }

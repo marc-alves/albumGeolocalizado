@@ -14,8 +14,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: block;
+  display: flex;
+  align-items: flex-end;
   cursor: pointer;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.descricao-album-na-grade {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 1rem;
 }
 
 .foto-na-grade {
