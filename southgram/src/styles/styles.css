@@ -1,0 +1,46 @@
+
+.carousel-img {
+  height: 80vh;
+}
+
+.carousel-img img {
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+}
+
+.album-na-grade {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.descricao-album-na-grade {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 1rem;
+}
+
+.foto-na-grade {
+  height: 300px;
+  min-width: 200px;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.carousel-modal-img {
+  max-height: 90vh;
+}
+
+.carousel-modal-img img {
+  width: 100%;
+}
